@@ -10,16 +10,24 @@
 <body>
     <header>
         <!-- nav -->
-        <nav id="navBar">
-            <ul class="inner">
-                <li><a href="#register">Register</a></li>
-                <li><a href="#login"></a>Login</li>
-            </ul>
-        </nav>
+        <div class="nav">
+            <button type="button" id="registerBtn">Register</button>
+            <button type="button" id="loginBtn">Login</button>
+        </div>
     </header>
     <main>
-        <div class="register"></div>
-        <div class="login"></div>
+        <!-- this one will be none and block -->
+        <div id="RegModal" class="modal">
+            <div class="Reg-modal-content">
+
+            </div>
+        </div>
+        <!-- this one will be none and block too -->
+        <div id="LogModal" class="modal">
+            <div class="Log-modal-content">
+
+            </div>
+        </div>
     </main>
     <script src="./js/style.js"></script>
 </body>
