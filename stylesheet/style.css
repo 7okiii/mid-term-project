@@ -47,7 +47,7 @@
   background-color: #3469ad;
 }
 
-.modal {
+.RegModal {
   display: none;
   position: fixed;
   left: 0;

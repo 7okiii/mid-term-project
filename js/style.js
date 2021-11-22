@@ -66,16 +66,16 @@ console.log(document);
 
 var regBtn = document.querySelector("#registerBtn");
 var close = document.querySelector(".close");
-var modal = document.querySelector(".modal");
-console.log(modal.style);
+var RegModal = document.querySelector(".RegModal");
+console.log(RegModal.style);
 regBtn.addEventListener('click',function(){
-    modal.style.display = "block";
+    RegModal.style.display = "block";
 });
 close.addEventListener('click',function(){
-    modal.style.display = "none";
+    RegModal.style.display = "none";
 })
 window.addEventListener('click',function(event){
-    if (event.target == modal) {
-        modal.style.display = "none";
+    if (event.target == RegModal) {
+        RegModal.style.display = "none";
     }
 })

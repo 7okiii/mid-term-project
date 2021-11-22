@@ -1,4 +1,4 @@
-@mixin modal {
+@mixin RegModal {
     display: none;
     position: fixed;
     left: 0;
@@ -63,8 +63,8 @@
     }
 }
 
-.modal {
-    @include modal;
+.RegModal {
+    @include RegModal;
     
 }    
 
