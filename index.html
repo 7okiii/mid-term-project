@@ -29,13 +29,13 @@
             <div class="Reg-modal-content">
                 <span class="close">&times;</span>
                 <div class="form">
+                    <label for="fname"><i class="fas fa-user"></i> Name</label>
                     <div class="name box">
                         <div class="fname">
-                            <label for="fname"><i class="fas fa-user"></i> First Name</label>
                             <input type="text" id="fname" placeholder="First Name">
                         </div>
                         <div class="lname">
-                            <label for="lname">Last Name</label>
+                            <!-- <label for="lname">Last Name</label> -->
                             <input type="text" id="lname" placeholder="Last Name">
                         </div>
                     </div>    
@@ -61,31 +61,59 @@
                         <div class="Addressbottom">
                             <input type="text" placeholder="Street Address">
                             <input type="text" placeholder="Street Address Line 2">
-                            <input type="text" placeholder="City">
-                            <input type="text" placeholder="State / Province">
+                            <div class="boxCity">
+                                <input type="text" placeholder="City">
+                                <input type="text" placeholder="State / Province">    
+                            </div>
                             <input type="text" placeholder="Postal / Zip code">
                         </div>    
                     </div>
+                    <div class="courseTitle">
+                        <h2>Chose your course</h2>
+                    </div>
                     <div class="class">
-                        <div class="english">
-                            <input type="radio" value="english" id="english" name="course">    
-                            <label for="english">English</label>
+                        <div class="classLeft">
+                            <div class="english">
+                                <input type="radio" value="english" id="english" name="course">    
+                                <label for="english">English</label>
+                            </div>
+                            <div class="career">
+                                <input type="radio" value="career" id="career" name="course">
+                                <label for="career">Career</label>
+                            </div>    
                         </div>
-                        <div class="career">
-                            <input type="radio" value="career" id="career" name="course">
-                            <label for="career">Career</label>
-                        </div>
+                        <div class="select">
+                            <select id="select"></select>
+                        </div>    
                     </div>
-                    <div class="select">
-                        <select id="select"></select>
-                    </div>
+                    <button type="submit" id="register">Register</button>
                 </div>
             </div>
         </div>
         <!-- this one will be none and block too -->
         <div id="LogModal" class="LogModal">
             <div class="Log-modal-content">
-
+                <span class="Close">&times;</span>
+                <div class="Logform">
+                    <div class="Fname Box">
+                        <label for="Fname"><i class="fas fa-user"></i></label>
+                        <input type="text" placeholder="First Name">
+                    </div>
+                    <div class="Lname Box">
+                        <input type="text" placeholder="Last Name">
+                    </div>
+                    <div class="Email Box">
+                        <label for="Email"><i class="fas fa-envelope"></i></label>
+                        <input type="email" placeholder="Email">
+                    </div>
+                    <div class="Password Box">
+                        <label for="Password"><i class="fas fa-unlock-alt"></i></label>
+                        <input type="password" placeholder="Password">
+                    </div>
+                    <div class="submit Box">
+                        <button type="submit">Login</button>
+                    </div>
+                </div>
             </div>
         </div>
     </main>

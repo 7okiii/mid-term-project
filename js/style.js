@@ -67,15 +67,30 @@ console.log(document);
 var regBtn = document.querySelector("#registerBtn");
 var close = document.querySelector(".close");
 var RegModal = document.querySelector(".RegModal");
-console.log(RegModal.style);
 regBtn.addEventListener('click',function(){
     RegModal.style.display = "block";
 });
 close.addEventListener('click',function(){
     RegModal.style.display = "none";
-})
+});
 window.addEventListener('click',function(event){
     if (event.target == RegModal) {
         RegModal.style.display = "none";
+    }
+});
+
+// function for log
+var LogBtn = document.querySelector("#loginBtn");
+var LogModal = document.querySelector(".LogModal");
+var Close = document.querySelector(".Close");
+LogBtn.addEventListener('click',function(){
+    LogModal.style.display = "block";
+});
+Close.addEventListener('click',function(){
+    LogModal.style.display = "none";
+});
+window.addEventListener('click',function(event){
+    if (event.target == LogModal) {
+        LogModal.style.display = "none";
     }
 })
