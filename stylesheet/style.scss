@@ -1,0 +1,180 @@
+@mixin modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+@mixin box() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 4px 0;
+}
+
+@mixin input($width) {
+    width: $width;
+    height: 35px;
+    margin: 5px 0;
+    padding-left: 10px;
+    border: none;
+    outline: none;
+    transition: background-color 0.1s ease-in;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    background-color: rgb(113, 162, 226);
+    height: 60px;
+    width: 100%;
+    .logo {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        i {
+            margin: 0 10px;
+            font-size: 2rem;
+        }
+        p {
+            font-size: 1.5rem;
+        }
+    }
+    .menu {
+        height: 100%;
+        margin: 0 10px 0 auto;
+        button {
+            height: 100%;
+            width: 100px;
+            border: none;
+            background-color: rgba(223, 223, 223, 0.137);
+            color: white;
+            font-weight: bold;
+            &:hover {
+                background-color: rgb(52, 105, 173);
+            }
+        }
+    }
+}
+
+.modal {
+    @include modal;
+    
+}    
+
+
+.Reg-modal-content {
+    height: 700px;
+    width: 700px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(227, 227, 227);
+    margin: 10% auto;
+    box-shadow: 5px 5px 5px 5px gray;
+    animation: fade 1s;
+    .form {
+        width: 90%;
+        padding: 0
+    }
+    .close {
+        position: absolute;
+        top: 0;
+        right: 5px;
+        font-size: 2rem;
+        color: gray;
+        cursor: pointer;
+        &:hover {
+            color: black;
+        }
+    }
+}
+
+@keyframes fade {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+
+.name {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    .fname {
+        width: 48%;
+        label {
+            width: 100%;
+        }
+    }
+    .lname {
+        width: 48%;
+    }
+    input {
+        @include input(100%);
+    }
+}
+
+.birth {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+    input {
+        @include input(48%);
+    }
+}
+.contact {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    .email {
+        width: 48%;
+    }
+    .phone {
+        width: 48%;
+    }
+    input {
+        @include input(100%);
+    }
+}
+
+.address {
+    input {
+        @include input(100%);
+    }
+    input[placeholder="City"], input[placeholder="State / Province"] {
+        width: 48%;
+    }
+}
+
+.class {
+    display: flex;
+    justify-content: space-around;
+    .english {
+        display: flex;
+    }
+    .career {
+        display: flex;
+    }
+}
+
+.select {
+    select {
+        width: 50%;
+        height: 35px;
+        border: none;
+        outline: none;
+    }
+}
