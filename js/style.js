@@ -1,10 +1,10 @@
 var selectObj = document.querySelector("#select");
 selectObj.disable = "true";
 var radios = document.querySelectorAll("input[name=course]");
-function addOption(selectObj,optionText,optionValue) {
+function addOption(selectObj,text,value) {
     var optionObj = document.createElement('option');
-    optionObj.innerHTML = optionText;
-    optionObj.value = optionValue;
+    optionObj.innerHTML = text;
+    optionObj.value = value;
     selectObj.appendChild(optionObj);
 } 
 
@@ -58,11 +58,6 @@ function changeBg(event) {
         event.target.style.backgroundColor = "white";
     }
 }
-
-console.log(window);
-console.log(document);
-
-
 
 var regBtn = document.querySelector("#registerBtn");
 var close = document.querySelector(".close");

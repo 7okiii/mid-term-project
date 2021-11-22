@@ -56,10 +56,10 @@
                     </div>
                     <div class="address box">
                         <div class="top">
-                            <i class="fas fa-address-book"> Address</i>
+                            <label for="address"><i class="fas fa-address-book"></i> Address</label>
                         </div>
                         <div class="Addressbottom">
-                            <input type="text" placeholder="Street Address">
+                            <input type="text" placeholder="Street Address" id="address">
                             <input type="text" placeholder="Street Address Line 2">
                             <div class="boxCity">
                                 <input type="text" placeholder="City">
@@ -94,25 +94,36 @@
         <div id="LogModal" class="LogModal">
             <div class="Log-modal-content">
                 <span class="Close">&times;</span>
-                <div class="Logform">
-                    <div class="Fname Box">
-                        <label for="Fname"><i class="fas fa-user"></i></label>
-                        <input type="text" placeholder="First Name">
+                <div class="Top">
+                    <h2>Login</h2>
+                </div>
+                <div class="bottom">
+                    <div class="Box">
+                        <div class="left">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="right">
+                            <input type="text" placeholder="First Name">
+                            <input type="text" placeholder="Last Name">
+                        </div>    
                     </div>
-                    <div class="Lname Box">
-                        <input type="text" placeholder="Last Name">
+                    <div class="Box">
+                        <div class="left">
+                            <i class="fas fa-envelope-open"></i>
+                        </div>
+                        <div class="right">
+                            <input type="email" placeholder="Email">
+                        </div>    
                     </div>
-                    <div class="Email Box">
-                        <label for="Email"><i class="fas fa-envelope"></i></label>
-                        <input type="email" placeholder="Email">
+                    <div class="Box">
+                        <div class="left">
+                            <i class="fas fa-unlock-alt"></i>
+                        </div>
+                        <div class="right">
+                            <input type="password" placeholder="Password">
+                        </div>    
                     </div>
-                    <div class="Password Box">
-                        <label for="Password"><i class="fas fa-unlock-alt"></i></label>
-                        <input type="password" placeholder="Password">
-                    </div>
-                    <div class="submit Box">
-                        <button type="submit">Login</button>
-                    </div>
+                    <button type="submit">Login</button>
                 </div>
             </div>
         </div>
