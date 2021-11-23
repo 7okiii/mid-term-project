@@ -11,7 +11,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: rgba(42, 94, 161, 0.27);
+  background-color: rgba(47, 100, 170, 0.514);
   height: 60px;
   width: 100%;
 }
@@ -29,7 +29,7 @@
 .nav .logo i {
   margin: 0 10px;
   font-size: 2rem;
-  color: #3572a7;
+  color: #247bc8;
 }
 
 .nav .logo p {
@@ -71,7 +71,7 @@
 }
 
 .Reg-modal-content {
-  height: 700px;
+  height: 800px;
   width: 700px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -156,10 +156,6 @@
 
 .name .fname {
   width: 49%;
-}
-
-.name .fname label {
-  width: 100%;
 }
 
 .name .lname {
@@ -315,6 +311,48 @@
   border-radius: 5px;
 }
 
+.Password {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.Password input {
+  width: 70%;
+  height: 40px;
+  margin: 6px 0;
+  padding-left: 10px;
+  border: none;
+  outline: none;
+  -webkit-transition: background-color 0.1s ease-in;
+  transition: background-color 0.1s ease-in;
+  border-radius: 5px;
+}
+
+.Password #passBtn {
+  height: 40px;
+  border: none;
+  outline: none;
+  font-family: 'Ubuntu', sans-serif;
+  background-color: #5555b0;
+  color: white;
+  border-radius: 5px;
+  padding: 0 15px;
+}
+
+.Password #passBtn:hover {
+  background-color: #7878c0;
+}
+
 @media screen and (max-width: 800px) {
   .Reg-modal-content {
     width: 450px;
@@ -354,7 +392,7 @@
 }
 
 .Log-modal-content {
-  height: 500px;
+  height: 650px;
   width: 400px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -487,8 +525,38 @@
   margin-top: 20px;
 }
 
+#passBox {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 i {
   font-size: 1.2rem;
+}
+
+#remember .left {
+  text-align: center;
+  width: 80%;
+}
+
+#remember .left p {
+  background-color: #e7b719;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#remember .left p:hover {
+  background-color: #ecc547;
+}
+
+#remember .right {
+  width: 20%;
+}
+
+#remember input {
+  height: 1rem;
+  width: 1rem;
+  margin-left: 20px;
 }
 
 @media screen and (max-width: 800px) {

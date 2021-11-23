@@ -1,5 +1,5 @@
 var selectObj = document.querySelector("#select");
-selectObj.disable = "true";
+selectObj.disable = false;
 var radios = document.querySelectorAll("input[name=course]");
 function addOption(selectObj,text,value) {
     var optionObj = document.createElement('option');
@@ -10,8 +10,7 @@ function addOption(selectObj,text,value) {
 
 
 function radioChk(event) {
-    console.log(event);
-    selectObj.disable = false;
+    selectObj.disable = true;
     selectObj.innerHTML = "";
     if (event.target.value == "english") {
         for (var key in english) {
@@ -51,7 +50,6 @@ var career = {
 }
 
 function changeBg(event) {
-    console.log(event);
     if (event.type == 'focus') {
         event.target.style.backgroundColor = "lightBlue";
     }else if (event.type == 'blur') {
@@ -88,4 +86,32 @@ window.addEventListener('click',function(event){
     if (event.target == LogModal) {
         LogModal.style.display = "none";
     }
-})
+});
+
+var passInput = document.querySelectorAll("input[type=password]");
+var showPass = document.querySelector("button[id=passBtn]");
+console.log(passInput[0].type);
+showPass.addEventListener("click",function(event){
+    if (event.target.innerHTML == "Show Password") {
+        event.target.innerHTML = "Hide Password";
+        passInput[0].type = "text";
+    }else {
+        event.target.innerHTML = "Show Password";
+        passInput[0].type = "password";
+    }
+});
+
+var ShowPass = document.querySelector("button[id=PassBtn]");
+ShowPass.addEventListener("click",function(event){
+    if (event.target.innerHTML == "Show Password") {
+        event.target.innerHTML = "Hide Password";
+        passInput[1].type = "text";
+    }else {
+        event.target.innerHTML = "Show Password";
+        passInput[1].type = "password";
+    }
+});
+
+
+
+

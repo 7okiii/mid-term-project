@@ -53,7 +53,7 @@ $btnColor: rgb(85, 85, 176);
 .nav {
     display: flex;
     align-items: center;
-    background-color: rgba(42, 94, 161, 0.27);
+    background-color: rgba(47, 100, 170, 0.514);
     height: 60px;
     width: 100%;
     .logo {
@@ -63,7 +63,7 @@ $btnColor: rgb(85, 85, 176);
         i {
             margin: 0 10px;
             font-size: 2rem;
-            color: rgb(53, 114, 167);
+            color: rgb(36, 123, 200);
         }
         p {
             font-size: 1.5rem;
@@ -92,11 +92,12 @@ $btnColor: rgb(85, 85, 176);
 
 .RegModal {
     @include RegModal;
+    // display: block;
 }    
 
 
 .Reg-modal-content {
-    height: 700px;
+    height: 800px;
     width: 700px;
     display: flex;
     position: relative;
@@ -113,7 +114,7 @@ $btnColor: rgb(85, 85, 176);
         display: flex;
         flex-direction: column;
         width: 90%;
-        padding: 0
+        padding: 0;
     }
     .close {
         position: absolute;
@@ -142,9 +143,6 @@ $btnColor: rgb(85, 85, 176);
     margin-bottom: 10px;
     .fname {
         width: 49%;
-        label {
-            width: 100%;
-        }
     }
     .lname {
         width: 49%;
@@ -226,6 +224,30 @@ $btnColor: rgb(85, 85, 176);
     }
 }
 
+.Password {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    input {
+        @include input(70%);
+    }
+    #passBtn {
+        height: 40px;
+        border: none;
+        outline: none;
+        font-family: 'Ubuntu', sans-serif;
+        background-color: $btnColor;
+        color: white;
+        border-radius: 5px;
+        padding: 0 15px;
+        &:hover {
+            background-color: lighten($btnColor,10%);
+        }
+    }
+}
+
 @media screen and (max-width:800px) {
     .Reg-modal-content {
         width: 450px;
@@ -244,6 +266,7 @@ $btnColor: rgb(85, 85, 176);
             width: 100%
         }
     }
+    
 }
 
 
@@ -254,7 +277,7 @@ $btnColor: rgb(85, 85, 176);
 }
 
 .Log-modal-content {
-    height: 500px;
+    height: 650px;
     width: 400px;
     display: flex;
     position: relative;
@@ -335,8 +358,36 @@ $btnColor: rgb(85, 85, 176);
     }
 }
 
+#passBox {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 i {
     font-size: 1.2rem;
+}
+
+#remember {
+    .left {
+        text-align: center;
+        width: 80%;
+        p {
+            background-color: rgb(231, 183, 25);
+            padding: 10px;
+            border-radius: 5px;
+            &:hover {
+                background-color: lighten(rgb(231, 183, 25),10%);
+            }
+        }
+    }
+    .right {
+        width: 20%;
+    }
+    input {
+        height: 1rem;
+        width: 1rem;
+        margin-left: 20px;
+    }
 }
 
 @media screen and (max-width:800px) {
